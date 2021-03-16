@@ -19,11 +19,6 @@ jobs:
         # Space-separated list of packages to install using apt-get.  Will only run if on ubuntu.
         apt-get: libssl-dev
     
-    - name: Checkout with submodules
-      uses: actions/checkout@v2
-      with:
-        submodules: 'true'
-
     - name: Compile
       run: make
       
@@ -40,11 +35,6 @@ jobs:
         # Space-separated list of packages to install using brew install.  Will only run if on OSX.
         brew: openssl
     
-    - name: Checkout with submodules
-      uses: actions/checkout@v2
-      with:
-        submodules: 'true'
-
     - name: Compile
       run: CFLAGS="-I/usr/local/opt/openssl/include/" LDFLAGS="-L/usr/local/opt/openssl/lib/" make
       
@@ -63,11 +53,6 @@ jobs:
         install-dir: c:\tools\cygwin # optional, default is C:\tools\cygwin
         packages: gcc-core binutils make zip libssl-devel # optional
     
-    - name: Checkout with submodules
-      uses: actions/checkout@v2
-      with:
-        submodules: 'true'
-
     - name: Compile
       run: make
       
