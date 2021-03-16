@@ -21,8 +21,6 @@ jobs:
     
     - name: Checkout with submodules
       uses: actions/checkout@v2
-      with:
-        submodules: 'true'
 
     - name: Compile
       run: make
@@ -42,8 +40,6 @@ jobs:
     
     - name: Checkout with submodules
       uses: actions/checkout@v2
-      with:
-        submodules: 'true'
 
     - name: Compile
       run: CFLAGS="-I/usr/local/opt/openssl/include/" LDFLAGS="-L/usr/local/opt/openssl/lib/" make
@@ -65,8 +61,6 @@ jobs:
     
     - name: Checkout with submodules
       uses: actions/checkout@v2
-      with:
-        submodules: 'true'
 
     - name: Compile
       run: make
